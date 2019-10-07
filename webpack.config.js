@@ -1,3 +1,3 @@
-const webpackConfig = require('./config/webpack.config.analytics');
+const webpackConfig = require('./.webpack/config.analytics');
 
 module.exports = webpackConfig;

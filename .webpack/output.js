@@ -1,4 +1,4 @@
-const paths = require('../paths');
+const paths = require('../config/paths');
 
 const output = {
   path: paths.buildDir,
