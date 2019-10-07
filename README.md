@@ -12,6 +12,6 @@
 - Environment Variables - Before and after Webpack
 
 ## Commands
-- Start Dev Server: `yarn start`
+- Start dev-server: `yarn start`
 - Build: `yarn build`
-- Analyze Build: `yarn analyze`
+- Analyze-build: `yarn analyze`
