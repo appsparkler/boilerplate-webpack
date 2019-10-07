@@ -1,4 +1,4 @@
-const plugins = require('./plugins');
+const plugins = require('./plugins.common');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = [
