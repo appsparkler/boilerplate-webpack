@@ -1,9 +1,15 @@
 # Webpack Boilerplate
 
+## Main Features
+- Implements `HMR` with `module.hot API` - replaces modules without browser refresh.
+
 ## Features
-- `HMR` with `module.hot.accept()`
-- Environment Variables
-- Webpack Bundle Analyzer - `yarn analyze`
+- Well container `environment configurations` with `environment-variables`.
+- Very basic Webpack project
+- No Loaders
+- No Optimization
+- Webpack Dev Server
+- Environment Variables - Before and after Webpack
 
 ## Commands
 - Analyze Build: `yarn analyze`
