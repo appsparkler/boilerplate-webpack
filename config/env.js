@@ -1,12 +1,7 @@
-getDotEnvFilePath();
+const dotenv = require('dotenv');
+const paths = require('./paths');
 
-function getDotEnvFilePath() {
-  try {
-      const path = require('path');
-      return path.resolve('.env');
-  } catch (e) {
-
-  } finally {
-
-  }
-}
+const NODE_ENV = process.env.NODE_ENV || 'development';
+dotenv.config({
+  path: paths.dotEnv[NODE_ENV]
+});
