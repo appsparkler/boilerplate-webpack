@@ -2,5 +2,20 @@
   "name": "brands",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "jest": "jest",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "analyze": "node scripts/analyze.js"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "webpack": "^4.41.0",
+    "webpack-bundle-analyzer": "^3.5.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
 }
