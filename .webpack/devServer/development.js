@@ -1,4 +1,4 @@
 module.exports = {
-  hot: true,
+  hot:true,
   writeToDisk: true
-}
+};
