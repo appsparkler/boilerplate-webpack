@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "jest": "jest",
-    "webpack": "webpack",
+    "build": "cross-env NODE_ENV=production webpack",
     "webpack-dev-server": "webpack-dev-server",
     "analyze": "cross-env NODE_ENV=analytics webpack",
     "start": "cross-env NODE_ENV=development webpack-dev-server"
