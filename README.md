@@ -1,5 +1,13 @@
 # Webpack Boilerplate
 
+## Getting Started
+- CLONE `git clone https://github.com/appsparkler/boilerplate-webpack.git`
+- `cd boilerplate-webpack`
+- `yarn install` or `npm install`
+- Start dev-server: `yarn start`
+- Build: `yarn build`
+- Analyze-build: `yarn analyze`
+
 ## Main Features
 - Implements `HMR` with `module.hot API` - replaces modules without browser refresh.
 
@@ -10,8 +18,3 @@
 - No Optimization
 - Webpack Dev Server
 - Environment Variables - Before and after Webpack
-
-## Commands
-- Start dev-server: `yarn start`
-- Build: `yarn build`
-- Analyze-build: `yarn analyze`
