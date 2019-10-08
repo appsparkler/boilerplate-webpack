@@ -12,6 +12,7 @@
 - With ESLINT configuration - https://www.github.com/appsparkler/boilerplate-webpack/tree/eslint-v1
 
 ## Main Features
+- Has Eslint configuration
 - Implements `HMR` with `module.hot API` - replaces modules without browser refresh.
 
 ## Features
