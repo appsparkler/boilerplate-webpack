@@ -7,6 +7,7 @@
 - Start dev-server: `yarn start`
 - Build: `yarn build`
 - Analyze-build: `yarn analyze`
+- Lint: `yarn lint`
 
 ## Links
 - With ESLINT configuration - https://www.github.com/appsparkler/boilerplate-webpack/tree/eslint-v1
