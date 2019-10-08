@@ -8,6 +8,9 @@
 - Build: `yarn build`
 - Analyze-build: `yarn analyze`
 
+## Links
+- With ESLINT configuration - https://www.github.com/appsparkler/boilerplate-webpack/tree/eslint-v1
+
 ## Main Features
 - Implements `HMR` with `module.hot API` - replaces modules without browser refresh.
 
