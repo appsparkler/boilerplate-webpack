@@ -1,12 +1,14 @@
-const path = require('path');
+const resolve = require('path').resolve;
 
 module.exports = {
-  baseDir: path.resolve('./'),
-  appIndex: path.resolve('./src/index.js'),
-  buildDir: path.resolve('./build'),
-  dotEnv:{ 
-    development: path.resolve('./.env.development'),
-    production: path.resolve('./.env.production'),
-    analytics: path.resolve('./.env.analytics')
-  }
+  baseDir: resolve('./'),
+  appIndex: resolve('./src/index.js'),
+  buildDir: resolve('./build'),
+  appComponents: resolve('./src/components'),
+  // DOT-ENV
+  dotEnv: {
+    development: resolve('./.env.development'),
+    production: resolve('./.env.production'),
+    analytics: resolve('./.env.analytics'),
+  },
 };
