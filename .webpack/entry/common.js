@@ -1,6 +1,7 @@
 const paths = require('../../config/paths');
+const resolve = require('path').resolve;
 
 module.exports = {
-  foo: paths.appComponents + '/groupA/foo/foo.js',
-  bar: paths.appComponents + '/groupA/bar/bar.js'
+  groupA_foo: resolve(paths.appComponents, 'groupA/foo'),
+  groupA_bar: resolve(paths.appComponents, 'groupA/bar'),
 };
