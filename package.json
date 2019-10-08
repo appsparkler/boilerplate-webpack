@@ -18,5 +18,11 @@
     "webpack-bundle-analyzer": "^3.5.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
+  },
+  "eslintConfig": {
+    "extends": "google"
+  },
+  "dependencies": {
+    "eslint-config-google": "^0.14.0"
   }
 }
