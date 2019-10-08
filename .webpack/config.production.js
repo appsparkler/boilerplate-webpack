@@ -1,8 +1,10 @@
 const commonWebpackConfig = require('./config.common');
 const plugins = require('./plugins/production');
 const mode = require('./mode/production');
+const productionModule = require('./module/production');
 
 module.exports = Object.assign(commonWebpackConfig, {
   plugins,
-  mode
+  mode,
+  module: productionModule
 });
