@@ -20,4 +20,4 @@
 - No Loaders
 - No Optimization
 - Webpack Dev Server
-- Environment Variables - Before and after Webpack
+- Environment Variables - Before and after Webpack.
