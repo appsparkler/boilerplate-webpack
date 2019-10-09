@@ -11,9 +11,6 @@ module.exports = [
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
-    filename: '[name].[contenthash:8].css',
-    publicPath: () => {
-      return '/components/test'
-    }
+    filename: '/[name]/css-clientlib-[contenthash:8]/css/styles.css',
   }),
 ];
