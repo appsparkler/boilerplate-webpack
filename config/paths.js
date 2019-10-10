@@ -2,6 +2,7 @@ const resolve = require('path').resolve;
 
 module.exports = {
   baseDir: resolve('./'),
+  srcDir: resolve('./src'),
   appIndex: resolve('./src/index.js'),
   buildDir: resolve('./build'),
   appComponents: resolve('./src/components'),
