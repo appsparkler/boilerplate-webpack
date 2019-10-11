@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-// const parseArgs = require('minimist');
+const args = require('../../config/args');
 const webpackConfig = {};
 
 webpackConfig.mode = require('../.webpack/mode/production');
@@ -17,8 +17,8 @@ compiler.run((err, stats) => {
 
 /*eslint-disable*/
 function displayStats(stats) {
-  // console.log(stats.toString({
-  //   colors: true
-  // }));
+  if(args.stats) console.log(stats.toString({
+      colors: true
+    }));
   console.log('Build completed...')
 }
