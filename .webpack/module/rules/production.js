@@ -13,11 +13,14 @@ function getSassRule() {
   return {
     test: /\.(sass|scss)$/,
     use: [
+      // style-loader
       require.resolve('style-loader'), // for dev mode only (for production we can try mini-css-extract plugin)
+      // MiniCssExtractPlugin-loader
       {
         loader: MiniCssExtractPlugin.loader,
         // options: shouldUseRelativeAssetPaths ? { publicPath: '../../' } : {},
       },
+      // css-loader
       {
         loader: require.resolve('css-loader'),
         options:{
@@ -25,6 +28,7 @@ function getSassRule() {
           sourceMap: true,
         }
       },
+      // postcss-loader
       {
         loader: require.resolve('postcss-loader'),
         options: {
@@ -41,6 +45,7 @@ function getSassRule() {
           sourceMap: true
         }
       },
+      // resolve-url-loader
       {
         loader: require.resolve('resolve-url-loader'),
         options: {

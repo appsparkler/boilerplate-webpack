@@ -1,4 +1,5 @@
 const commonRules = require('./common');
+const brand = require('../../../config/args').brand;
 
 module.exports = [
   ...commonRules,
@@ -8,10 +9,17 @@ module.exports = [
 // abstracted methods
 function getSassRule() {
   return {
-    loader: require.resolve('sass-loader'),
-    options: {
-      sourceMap: true,
-      prependData: `@import '../../../gcss/${brand}/colors'`
-    }
+    test: /\.(sass|scss)$/,
+    use: [
+      'style-loader',
+      'css-loader',
+      {
+        loader: require.resolve('sass-loader'),
+        options: {
+          sourceMap: true,
+          prependData: `@import '../../../gcss/${brand}/colors'`
+        }
+      }
+    ]
   };
 }
