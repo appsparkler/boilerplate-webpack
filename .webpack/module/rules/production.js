@@ -9,6 +9,7 @@ module.exports = [
 // abstracted functions
 function getSassRule() {
   const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+  const brand = require('../../../config/args').brand;
   //
   return {
     test: /\.(sass|scss)$/,
@@ -51,7 +52,7 @@ function getSassRule() {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
-          prependData: "@import '../../../gcss/brand1/colors'"
+          prependData: `@import '../../../gcss/${brand}/colors'`
         }
       }
     ],
