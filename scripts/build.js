@@ -15,6 +15,7 @@ compiler.run((err, stats) => {
   else displayStats(stats);
 });
 
+/*eslint-disable*/
 function displayStats(stats) {
   // console.log(stats.toString({
   //   colors: true
