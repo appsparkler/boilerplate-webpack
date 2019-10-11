@@ -1,9 +1,9 @@
 const paths = require('../../config/paths');
-const { resolve } = require('path');
+const brand = require('../../config/args').brand;
 
 const output = {
-  path: resolve(paths.buildDir),
-  filename: '[name]/js-clientlib-[contenthash:8]/js/[name]-script.js'
+  path: `${paths.buildDir}-${brand}` ,
+  filename: `[name]/js-clientlib-[contenthash:8]/js/[name]-script.js`
 };
 
 module.exports = output;
