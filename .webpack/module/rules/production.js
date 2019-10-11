@@ -51,6 +51,7 @@ function getSassRule() {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
+          prependData: "@import '../../../gcss/brand1/colors'"
         }
       }
     ],
