@@ -16,7 +16,8 @@ compiler.run((err, stats) => {
 });
 
 function displayStats(stats) {
-  console.log(stats.toString({
-    colors: true
-  }));
+  // console.log(stats.toString({
+  //   colors: true
+  // }));
+  console.log('Build completed...')
 }
