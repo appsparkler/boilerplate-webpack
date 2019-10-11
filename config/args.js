@@ -1,5 +1,5 @@
 const parseArgs = require('minimist');
 
 module.exports = {
-  brand: parseArgs(process.argv).brand || 'brand1'
+  brand: parseArgs(process.argv).brand || 'brand1',
 };
