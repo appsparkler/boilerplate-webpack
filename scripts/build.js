@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const args = require('../../config/args');
+const args = require('../config/args');
 const webpackConfig = {};
 
 webpackConfig.mode = require('../.webpack/mode/production');

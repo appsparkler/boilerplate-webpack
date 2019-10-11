@@ -1,5 +1,6 @@
+const commonModule = require('./common');
 const rules = require('./rules/production');
 
-module.exports = {
+module.exports = Object.assign(commonModule,{
   rules
-};
+});

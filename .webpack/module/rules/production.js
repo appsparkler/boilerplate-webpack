@@ -1,9 +1,8 @@
+const commonRules = require('./common');
+
 module.exports = [
-  {
-    oneOf:[
-      getSassRule()
-    ]
-  }
+  ...commonRules,
+  getSassRule()
 ];
 
 // abstracted functions
