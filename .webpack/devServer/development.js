@@ -1,4 +1,5 @@
 module.exports = {
   hot:true,
-  writeToDisk: true
+  writeToDisk: true,
+  stats: 'minimal'
 };

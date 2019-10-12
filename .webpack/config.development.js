@@ -1,8 +1,16 @@
 const webpackBaseConfig = require('./config.common');
-const devServer = require('./devServer/development');
+const mode = require('./mode/development');
+const entry = require('./entry/development');
+const devModule = require('./module/development');
 const plugins = require('./plugins/development');
+const output = require('../.webpack/output/development');
+const resolve = require('../.webpack/resolve/development');
 
 module.exports = Object.assign(webpackBaseConfig, {
-  devServer,
-  plugins
+  mode,
+  entry,
+  module: devModule,
+  plugins,
+  output,
+  resolve
 });
