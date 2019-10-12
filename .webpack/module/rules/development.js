@@ -17,7 +17,7 @@ function getSassRule() {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
-          prependData: `@import '../../../brands/${brand}/colors'`
+          prependData: `@import '../../../brands/${brand}/variables'`
         }
       }
     ]
