@@ -1,7 +1,7 @@
 setupEnvVariables();
 const webpack = require('webpack');
 const args = require('../config/args');
-const webpackConfig = require('../.webpack/config.production');
+const webpackConfig = require('../.webpack/config.analytics');
 const compiler = webpack(webpackConfig);
 
 compiler.run((err, stats) => {
@@ -18,6 +18,6 @@ function displayStats(stats) {
 }
 
 function setupEnvVariables() {
-  process.env.NODE_ENV = 'production';
+  process.env.NODE_ENV = 'analytics';
   require('../config/env');
 }

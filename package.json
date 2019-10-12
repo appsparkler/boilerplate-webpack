@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node scripts/build",
     "webpack-dev-server": "webpack-dev-server",
-    "analyze": "node scripts/build",
+    "analyze": "node scripts/analyze",
     "start": "node scripts/start",
     "lint": "eslint src --fix"
   },
