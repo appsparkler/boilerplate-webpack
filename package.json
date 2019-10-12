@@ -10,6 +10,7 @@
     "lint": "eslint src --fix"
   },
   "devDependencies": {
+    "bootstrap": "^4.3.1",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
@@ -41,5 +42,9 @@
       "es6": true
     },
     "extends": "google"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }
