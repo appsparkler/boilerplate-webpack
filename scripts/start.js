@@ -1,23 +1,18 @@
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const args = require('../config/args');
-const devServerConfig = require('../.webpack/devServer/development');
 const webpackConfig = require('../.webpack/config.development');
 const compiler = webpack(webpackConfig);
+const devServerConfig = getDevServerConfig();
 const devServer = new WebpackDevServer(compiler, devServerConfig);
+const PORT = '8888';
 
-devServer.listen('8888', () => console.log('Starting server on http://localhost:8888'))
+devServer.listen(PORT, () => console.log(`Starting server on http://localhost:${PORT}`));
 
-// compiler.run((err, stats) => {
-//   if (err || stats.hasErrors()) return console.error(err, stats);
-//   else displayStats(stats);
-// });
-
-
-/*eslint-disable*/
-function displayStats(stats) {
-  if(args.stats) console.log(stats.toString({
-      colors: true
-    }));
-  console.log('Build completed...')
+/* eslint-disable */
+function getDevServerConfig() {
+  return {
+    hot:true,
+    writeToDisk: true,
+    stats: 'errors-warnings'
+  };
 }
