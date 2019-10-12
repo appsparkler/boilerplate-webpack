@@ -1,10 +1,11 @@
-const commonWebpackConfig = require('./config.common');
-const plugins = require('./plugins/production');
-const mode = require('./mode/production');
-const productionModule = require('./module/production');
+const commonConfig = require('./config.common');
+const productionConfig = {
+  mode: require('./mode/production'),
+  entry: require('./entry/production'),
+  output: require('./output/production'),
+  plugins: require('./plugins/production'),
+  module: require('./module/production'),
+  resolve: require('./resolve/production')
+};
 
-module.exports = Object.assign(commonWebpackConfig, {
-  plugins,
-  mode,
-  module: productionModule
-});
+module.exports = Object.assign(commonConfig, productionConfig);

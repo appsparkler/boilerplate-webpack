@@ -1,13 +1,8 @@
+const 
+
 const webpack = require('webpack');
 const args = require('../config/args');
-const webpackConfig = {};
-
-webpackConfig.mode = require('../.webpack/mode/production');
-webpackConfig.entry = require('../.webpack/entry/production');
-webpackConfig.module = require('../.webpack/module/production');
-webpackConfig.output = require('../.webpack/output/production');
-webpackConfig.plugins = require('../.webpack/plugins/production');
-webpackConfig.resolve = require('../.webpack/resolve/production');
+const webpackConfig = require('../.webpack/config.production');
 const compiler = webpack(webpackConfig);
 
 compiler.run((err, stats) => {
