@@ -1,10 +1,5 @@
-const webpackBaseConfig = require('./config.common');
-const plugins = require('./plugins/analytics');
-const output = require('./output/analytics');
-const mode = require('./mode/analytics');
+const webpackBaseConfig = require('./config.production');
 
 module.exports = Object.assign(webpackBaseConfig, {
-  mode,
-  output,
-  plugins
+  plugins: require('./plugins/analytics')
 });
