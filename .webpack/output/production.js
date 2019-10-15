@@ -1,4 +1,2 @@
 const commonOutput = require('./common');
-module.exports = Object.assign(commonOutput,{
-
-});
+module.exports = Object.assign(commonOutput);

@@ -5,7 +5,8 @@ const productionConfig = {
   output: require('./output/production'),
   plugins: require('./plugins/production'),
   module: require('./module/production'),
-  resolve: require('./resolve/production')
+  resolve: require('./resolve/production'),
+  optimization: require('./optimization/production')
 };
 
 module.exports = Object.assign(commonConfig, productionConfig);
