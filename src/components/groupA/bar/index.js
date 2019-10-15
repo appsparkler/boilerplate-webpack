@@ -1,4 +1,5 @@
-import './styles.sass';
+import 'bootstrap/scss/bootstrap';
+import './styles';
 
 document.getElementById('bar').innerHTML = '<h1>I am Bar...<h1>';
 

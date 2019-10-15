@@ -1,4 +1,5 @@
-import './styles.sass';
+import 'bootstrap/scss/bootstrap';
+import './styles';
 
 document.getElementById('foo').innerHTML = `
   <div class="container">
