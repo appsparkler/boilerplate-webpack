@@ -6,5 +6,5 @@ module.exports = {
     resolve(paths.srcDir),
     resolve(paths.baseDir, 'node_modules')
   ],
-  extensions: ['.js', '.sass', '.scss']
+  extensions: ['.js', '.scss', '.sass', ]
 }
