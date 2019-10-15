@@ -10,7 +10,9 @@ function runWebpackCompiler() {
   this.compiler = webpack(webpackConfig);
 
   this.compiler.run((err, stats) => {
-    if (err || stats.hasErrors()) return console.error(err, stats);
+    if (err || stats.hasErrors()) return console.error(stats.compilation.errors.toString({
+      colors:true
+    }));
     else displayStats(stats);
   });
 }

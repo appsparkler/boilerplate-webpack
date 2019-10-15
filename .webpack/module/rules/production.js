@@ -57,7 +57,11 @@ function getSassRule() {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
-          // prependData: `@import '../../../brands/${brand}/variables'`
+          prependData: (ctx) => {
+            const isInNodeModules = ctx.resourcePath.match(/node_modules/);
+            if(!isInNodeModules) return `@import '../../../brands/${brand}/variables'`
+            else return ''
+          }
         }
       }
     ],
