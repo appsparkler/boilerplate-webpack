@@ -57,10 +57,14 @@ function getSassRule() {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
+          // sassOptions: {
+          //   data: `@import 'src/brands/${brand}/variables`,
+          //   includePaths: [require('path').resolve(__dirname, './')]
+          // },
+          // prependData:
           prependData: (ctx) => {
-            const isInNodeModules = ctx.resourcePath.match(/node_modules/);
-            if(!isInNodeModules) return `@import '../../../brands/${brand}/variables'`
-            else return '';
+            if(ctx.resourcePath.match(/\.scss/)) return `@import '../../../src/brands/${brand}/variables';`;
+            else return `@import '../../../brands/${brand}/variables'`;
           }
         }
       }

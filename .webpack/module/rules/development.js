@@ -17,7 +17,11 @@ function getSassRule() {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
-          prependData: `@import '../../../brands/${brand}/variables'`
+          // prependData: `@import '../../../brands/${brand}/variables'`
+          prependData: (ctx) => {
+            if(ctx.resourcePath.match(/\.scss/)) return `@import '../../../src/brands/${brand}/variables';`;
+            else return `@import '../../../brands/${brand}/variables'`;
+          }
         }
       }
     ]
