@@ -60,7 +60,7 @@ function getSassRule() {
           prependData: (ctx) => {
             const isInNodeModules = ctx.resourcePath.match(/node_modules/);
             if(!isInNodeModules) return `@import '../../../brands/${brand}/variables'`
-            else return ''
+            else return '';
           }
         }
       }
