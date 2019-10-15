@@ -52,6 +52,7 @@ function getSassRule() {
           sourceMap: true,
         }
       },
+      // sass-loader
       {
         loader: require.resolve('sass-loader'),
         options: {
