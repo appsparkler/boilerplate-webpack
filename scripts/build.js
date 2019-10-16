@@ -1,5 +1,5 @@
-setupEnvVariables();
 const setBrandOnResult = require('./inquire-brand');
+setupEnvVariables();
 setBrandOnResult()
     .then(runWebpackCompiler);
 
