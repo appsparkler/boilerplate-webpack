@@ -8,7 +8,7 @@ module.exports = [
 // abstracted functions
 function getSassRule() {
   const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-  const brand = require('../../../config/args').brand;
+  const brand = process.env.BRAND || 'DEFAULT';
   //
   return {
     test: /\.(sass|scss)$/,

@@ -1,5 +1,4 @@
 const commonRules = require('./common');
-const brand = require('../../../config/args').brand;
 
 module.exports = [
   ...commonRules,
@@ -8,6 +7,7 @@ module.exports = [
 
 // abstracted methods
 function getSassRule() {
+  const brand = process.env.BRAND || 'DEFAULT';
   return {
     test: /\.(sass|scss)$/,
     use: [
