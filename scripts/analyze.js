@@ -1,19 +1,29 @@
+const inquireBrands = require('./inquire-brand');
+//
 setupEnvVariables();
-const webpack = require('webpack');
-const args = require('../config/args');
-const webpackConfig = require('../.webpack/config.analytics');
-const compiler = webpack(webpackConfig);
+inquireBrands()
+    .then(runCompiler);
 
-compiler.run((err, stats) => {
-  if (err || stats.hasErrors()) return console.error(err, stats);
-  else displayStats(stats);
-});
+/*eslint-disable*/
+function runCompiler() {
+  try {
+    const webpack = require('webpack');
+    const webpackConfig = require('../.webpack/config.analytics');
+    const compiler = webpack(webpackConfig);
+
+    compiler.run((err, stats) => {
+      if (err || stats.hasErrors()) return console.error(err, stats);
+      else displayStats(stats);
+    });
+  } catch (e) {
+    console.log(e);
+  } finally {
+
+  }
+}
 
 /*eslint-disable*/
 function displayStats(stats) {
-  if(args.stats) console.log(stats.toString({
-      colors: true
-    }));
   console.log('Build completed...')
 }
 

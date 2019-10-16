@@ -1,6 +1,7 @@
-const bus = {};
-setupEnvVariables.call(bus);
-runWebpackCompiler.call(bus);
+setupEnvVariables();
+const setBrandOnResult = require('./inquire-brand');
+setBrandOnResult()
+    .then(runWebpackCompiler);
 
 // abstract functions
 /*eslint-disable*/
@@ -18,11 +19,7 @@ function runWebpackCompiler() {
 }
 
 function displayStats(stats) {
-  const args = require('../config/args');
-  if(args.stats) console.log(stats.toString({
-      colors: true
-    }));
-  console.log('Build completed...')
+  console.log('Build completed...');
 }
 
 function setupEnvVariables() {
