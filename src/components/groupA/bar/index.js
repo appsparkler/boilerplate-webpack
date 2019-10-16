@@ -1,11 +1,10 @@
-// import 'bootstrap/scss/bootstrap';
 import './styles';
 import 'bootstrap';
 
 document.getElementById('bar').innerHTML = `
   <h1 class="text-primary bg-secondary">I am Bar...</h1>
   <div class="test">
-    I am Test
+    I am Test...
   </div>
 `;
 
