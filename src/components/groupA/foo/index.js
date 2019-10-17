@@ -1,15 +1,52 @@
+import React from 'react';
+import ReactDom from 'react-dom';
 import './styles';
 
-document.getElementById('foo').innerHTML = `
-  <div class="container">
-    <div class="row">
-      <div class="col-3">
-        <h2 class=" p-2 text-primary bg-secondary">I am Foo...</h2>
-      </div>
-    </div>
-  </div>
-`;
+export default class Foo extends React.Component {
+  render() {
+    return <h1 class="text-primary bg-danger">Hello World from Foo...</h1>
+  }
+}
+
+ReactDom.render(<Foo />, document.querySelector('.foo'));
 
 if (module.hot) {
   module.hot.accept();
 }
+
+
+/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a className="navbar-brand" href="#">Navbar</a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item active">
+          <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
+        </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a className="dropdown-item" href="#">Action</a>
+            <a className="dropdown-item" href="#">Another action</a>
+            <div className="dropdown-divider"></div>
+            <a className="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form className="form-inline my-2 my-lg-0">
+        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>*/
