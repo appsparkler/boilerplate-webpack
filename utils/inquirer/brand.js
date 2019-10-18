@@ -5,13 +5,13 @@ module.exports = function setBrandOnResult() {
     const paths = require(`${process.env.INIT_CWD}/config/paths`);
     const {resolve} = require('path');
     const brands = glob.sync('*', {
-      cwd: resolve(paths.srcDir, 'brands'),
+      cwd: resolve(paths.srcDir, 'brands')
     });
     const prompts = [{
       type: 'rawlist',
       name: 'brand',
       message: 'Select brand:',
-      choices: brands || [],
+      choices: brands.filter(brand => !brand.match(/\.s(a|c)ss/)) || [],
     }];
     return inquirer
         .prompt(prompts)
