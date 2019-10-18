@@ -1,7 +1,6 @@
-const setBrandOnResult = require('./inquire-brand');
-setupEnvVariables();
-setBrandOnResult()
-    .then(runWebpackCompiler);
+require(`${process.env.INIT_CWD}/utils/inquirer/brand`)()
+  .then(setupEnvVariables.bind('production'))
+  .then(runWebpackCompiler);
 
 // abstract functions
 /*eslint-disable*/
