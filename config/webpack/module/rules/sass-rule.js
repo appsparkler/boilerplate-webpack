@@ -2,6 +2,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const brand = process.env.BRAND || 'DEFAULT';
 const isProduction = process.env.NODE_ENV === 'production';
 const isDevelopment = process.env.NODE_ENV === 'development';
+const paths = require(`${process.env.INIT_CWD}/config/paths`);
+const {resolve} = require('path');
 
 module.exports = {
   test: /\.(sass|scss)$/,
@@ -49,9 +51,12 @@ module.exports = {
       loader: require.resolve('sass-loader'),
       options: {
         sourceMap: isProduction,
+        sassOptions:{
+          includePaths:[resolve(paths.srcDir, 'brands')]
+        },
         prependData: (ctx) => {
-          if(ctx.resourcePath.match(/\.scss/)) return `@import '../../../src/brands/${brand}/variables';`;
-          else return `@import '../../../brands/${brand}/variables'`;
+          if(ctx.resourcePath.match(/src[\\/](brands|components)[\\/].*\.s(a|c)ss/))
+            return `@import '${brand}/variables'`;
         }
       }
     }
