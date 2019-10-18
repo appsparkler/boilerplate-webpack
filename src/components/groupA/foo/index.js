@@ -4,7 +4,15 @@ import './styles';
 
 export default class Foo extends React.Component {
   render() {
-    return <h1 class="text-primary bg-danger">Hello World from Foo...</h1>
+    return (
+      <>
+        <footer class="py-5 bg-dark">
+          <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+          </div>
+        </footer>
+      </>
+    )
   }
 }
 
