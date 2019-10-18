@@ -1,4 +1,4 @@
-const commonConfig = require('./config.common');
+const commonConfig = require('./common');
 const productionConfig = {
   mode: require('./mode/production'),
   entry: require('./entry/production'),

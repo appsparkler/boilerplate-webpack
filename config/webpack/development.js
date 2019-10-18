@@ -1,4 +1,4 @@
-const webpackBaseConfig = require('./config.common');
+const webpackBaseConfig = require('./common');
 const devConfig = {
   mode: require('./mode/development'),
   entry: require('./entry/development'),
