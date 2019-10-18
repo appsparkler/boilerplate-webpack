@@ -1,7 +1,7 @@
 const commonPlugins = require('./common');
 const DotEnv = require('dotenv-webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const paths = require('../../config/paths');
+const paths = require(`${process.env.INIT_CWD}/config/paths`);
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = [

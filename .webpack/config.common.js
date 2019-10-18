@@ -1,4 +1,5 @@
-const paths = require('../config/paths');
+const {INIT_CWD} = process.env;
+const paths = require(`${INIT_CWD}/config/paths`);
 const output = require('./output/common');
 const plugins = require('./plugins/common');
 const mode = require('./mode/common');

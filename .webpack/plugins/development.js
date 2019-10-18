@@ -1,6 +1,6 @@
 const commonPlugins = require('./common');
 const DotEnv = require('dotenv-webpack');
-const paths = require('../../config/paths');
+const paths = require(`${process.env.INIT_CWD}/config/paths`);
 const webpack = require('webpack');
 
 module.exports = [

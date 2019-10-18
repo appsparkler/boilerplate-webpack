@@ -1,4 +1,4 @@
-const paths = require('../../../config/paths');
+const paths = require(`${process.env.INIT_CWD}/config/paths`);
 
 module.exports = {
   test: /\.(js|mjs|jsx|ts|tsx)$/,

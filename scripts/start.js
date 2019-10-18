@@ -1,6 +1,9 @@
 const setBrandOnResult = require('./inquire-brand');
 const result = {};
 //
+
+console.log(process);
+
 setBrandOnResult
     .call(result)
     .then(startDevServer.bind(result));

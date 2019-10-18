@@ -2,7 +2,7 @@ module.exports = function setBrandOnResult() {
   try {
     const inquirer = require('inquirer');
     const glob = require('glob');
-    const paths = require('../config/paths');
+    const paths = require(`${process.env.INIT_CWD}/config/paths`);
     const {resolve} = require('path');
     const brands = glob.sync('*', {
       cwd: resolve(paths.srcDir, 'brands'),
