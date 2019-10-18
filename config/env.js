@@ -1,7 +1,9 @@
-const dotenv = require('dotenv');
-const paths = require('./paths');
+module.exports = function(env) {
+  process.env.NODE_ENV = env || 'development';
+  const dotenv = require('dotenv');
+  const paths = require('./paths');
 
-const NODE_ENV = process.env.NODE_ENV || 'development';
-dotenv.config({
-  path: paths.dotEnv[NODE_ENV],
-});
+  dotenv.config({
+    path: paths.dotEnv[process.env.NODE_ENV],
+  });
+}
