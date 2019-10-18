@@ -3,12 +3,9 @@ const DotEnv = require('dotenv-webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const paths = require(`${process.env.INIT_CWD}/config/paths`);
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 module.exports = [
   ...commonPlugins,
-  new DotEnv({
-    path: paths.dotEnv.analytics
-  }),
+  new DotEnv(),
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional

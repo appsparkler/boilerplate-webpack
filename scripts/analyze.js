@@ -1,8 +1,7 @@
-const inquireBrands = require('./inquire-brand');
-//
-setupEnvVariables();
-inquireBrands()
-    .then(runCompiler);
+const {INIT_CWD} = process.env;
+require(`${INIT_CWD}/utils/inquirer/brand`)()
+  .then(require(`${INIT_CWD}/config/env`).bind('analytics'))
+  .then(runCompiler);
 
 /*eslint-disable*/
 function runCompiler() {
@@ -25,9 +24,4 @@ function runCompiler() {
 /*eslint-disable*/
 function displayStats(stats) {
   console.log('Build completed...')
-}
-
-function setupEnvVariables() {
-  process.env.NODE_ENV = 'analytics';
-  require('../config/env');
 }
