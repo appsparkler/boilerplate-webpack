@@ -1,9 +1,6 @@
 const setBrandOnResult = require('./inquire-brand');
 const result = {};
 //
-
-console.log(process);
-
 setBrandOnResult
     .call(result)
     .then(startDevServer.bind(result));
@@ -17,7 +14,7 @@ function startDevServer() {
     const chalk = require('chalk');
     const webpack = require('webpack');
     const WebpackDevServer = require('webpack-dev-server');
-    const webpackConfig = require(`${process.env.INIT_CWD}/config/development`);
+    const webpackConfig = require(`${process.env.INIT_CWD}/config/webpack/development`);
     const compiler = webpack(webpackConfig);
     const devServerConfig = getDevServerConfig();
     const devServer = new WebpackDevServer(compiler, devServerConfig);
