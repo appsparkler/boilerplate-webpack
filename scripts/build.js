@@ -1,5 +1,5 @@
 require(`${process.env.INIT_CWD}/utils/inquirer/brand`)()
-  .then(setupEnvVariables.bind('production'))
+  .then(require(`${process.env.INIT_CWD}/config/env`).bind('production'))
   .then(runWebpackCompiler);
 
 // abstract functions

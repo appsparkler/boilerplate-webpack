@@ -1,0 +1,19 @@
+version: '3'
+
+volumes:
+  nodemodules:nodemodules:/usr/src/service/node_modules
+  external
+
+
+services:
+  dev:
+    image: node
+    volumes:
+     - .:/usr/src/service/
+     - nodemodules:/usr/src/service/node_modules
+    working_dir: /usr/src/service
+    command: npm i -g rimraf
+    ports:
+      - 3000:3000
+      - 5000:5000
+      - 8000:8000
