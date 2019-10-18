@@ -1,13 +1,13 @@
-module.exports = (msg, bgColor = 'bgGreenBright', color = 'black', beforeEmptyLines = 0, afterEmptyLines = 0)=> {
+module.exports = ({msg, bgColor = 'bgGreenBright', color = 'black', beforeEmptyLines = 0, afterEmptyLines = 0}) => {
   const chalk = require('chalk');
-  // 
-  for (var i = 0; i < afterEmptyLines; i++) {
-    console.log();
-  }
   //
+  logEmptyLines(beforeEmptyLines);
   console.log(chalk[bgColor][color](msg));
-  //
-  for (var i = 0; i < afterEmptyLines; i++) {
+  logEmptyLines(afterEmptyLines);
+}
+
+function logEmptyLines(numberOfLines = 0) {
+  for (var i = 0; i < numberOfLines; i++) {
     console.log();
   }
 }

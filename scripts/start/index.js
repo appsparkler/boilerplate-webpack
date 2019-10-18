@@ -15,7 +15,11 @@ function startDevServer() {
     const compiler = webpack(webpackConfig);
     const devServer = new WebpackDevServer(compiler, devServerConfig);
     const PORT = process.env.WEBPACK_DEV_SERVER_PORT || 3000;
-    require(`${INIT_CWD}/utils/chalk-logger`)(`Initializing dev server with "${process.env.BRAND}" theme...`)
+    require(`${INIT_CWD}/utils/chalk-logger`)({
+      beforeEmptyLines: 2,
+      msg: `Initializing dev server with "${process.env.BRAND}" theme...`,
+      afterEmptyLines: 2
+    });
     devServer.listen(PORT);
   } catch (e) {
     console.log(e);
