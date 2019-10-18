@@ -2,7 +2,7 @@ module.exports = {
   splitChunks: {
     cacheGroups: {
       reactlibs: {
-        test: /[\\/]node_modules[\\/](.*)?react(.*)?\.(js|mjs|jsx|ts|tsx)$/,
+        test: /[\\/]node_modules[\\/]((?=(react)).*?)\.(js|mjs|jsx|ts|tsx)$/,
         name: 'react-cache',
         // cacheGroupKey here is `commons` as the key of the cacheGroup
         // name(module, chunks, cacheGroupKey) {
