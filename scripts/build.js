@@ -7,7 +7,7 @@ setBrandOnResult()
 /*eslint-disable*/
 function runWebpackCompiler() {
   const webpack = require('webpack');
-  const webpackConfig = require('../.webpack/config.production');
+  const webpackConfig = require(`${process.env.INIT_CWD}/config/webpack/production`);
   this.compiler = webpack(webpackConfig);
 
   this.compiler.run((err, stats) => {

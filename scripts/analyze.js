@@ -8,7 +8,7 @@ inquireBrands()
 function runCompiler() {
   try {
     const webpack = require('webpack');
-    const webpackConfig = require('../webpack/config/analytics');
+    const webpackConfig = require(`${process.env.INIT_CWD}/config/webpack/analytics`);
     const compiler = webpack(webpackConfig);
 
     compiler.run((err, stats) => {

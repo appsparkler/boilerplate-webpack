@@ -1,4 +1,4 @@
-const webpackBaseConfig = require('./config.production');
+const webpackBaseConfig = require('./production');
 
 module.exports = Object.assign(webpackBaseConfig, {
   plugins: require('./plugins/analytics')
