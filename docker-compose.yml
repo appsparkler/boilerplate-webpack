@@ -1,18 +1,14 @@
 version: '3'
 
-volumes:
-  nodemodules:nodemodules:/usr/src/service/node_modules
-  external
-
-
 services:
   dev:
-    image: node
+    image: node:latest
     volumes:
      - .:/usr/src/service/
-     - nodemodules:/usr/src/service/node_modules
+     - ./nodemodules:/usr/src/service/node_modules
+     # - nodemodules:/usr/src/service/node_modules
     working_dir: /usr/src/service
-    command: npm i -g rimraf
+    entrypoint: ./docker-entrypoint.sh
     ports:
       - 3000:3000
       - 5000:5000

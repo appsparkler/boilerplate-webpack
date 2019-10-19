@@ -1,12 +1,16 @@
-require(`${process.env.INIT_CWD}/utils/inquirer/brand`)()
-    .then(startDevServer);
+// require(`${process.env.INIT_CWD}/utils/inquirer/brand`)()
+//     .then(startDevServer);
+
+require(`${process.env.INIT_CWD}/config/env`)('development')
+process.env.BRAND = 'JEEPRED';
+startDevServer();
+
 
 // abstracted functions
 /* eslint-disable */
 function startDevServer() {
   try {
     const {INIT_CWD}= process.env;
-    require(`${INIT_CWD}/config/env`)('development');
     const chalk = require('chalk');
     const webpack = require('webpack');
     const devServerConfig = require('./dev-server-config');

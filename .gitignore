@@ -1,4 +1,5 @@
 node_modules
+nodemodules
 dist
 build*/
 yarn-error.log
